@@ -1,0 +1,26 @@
+{
+  "name": "sevasetu-e-governance-portal",
+  "version": "2.0.0",
+  "description": "National E-Governance Citizen Gateway with Express & SQLite Backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node test/test_api.js"
+  },
+  "keywords": [
+    "e-governance",
+    "digital-india",
+    "sevasetu",
+    "express",
+    "sqlite",
+    "full-stack"
+  ],
+  "author": "YUVA Intern",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>All Government Services – SevaSetu E-Governance Portal</title>
+  <meta name="description" content="Apply online for Aadhaar, PAN, Birth, Caste, Income, Residence, Voter and Scholarship certificates on SevaSetu.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Accessibility Bar -->
+  <aside class="gov-topbar" aria-label="Government Identification and Accessibility Bar">
+    <div class="container">
+      <div class="gov-topbar-inner">
+        <div class="gov-flag-badge">
+          <div class="tricolor-mini" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span>GOVERNMENT OF INDIA | NATIONAL E-GOVERNANCE GATEWAY</span>
+        </div>
+        <div class="topbar-actions">
+          <a href="#main-content" class="topbar-link">Skip to Main Content</a>
+          <span style="opacity: 0.3;">|</span>
+          <div class="font-resizer" aria-label="Text Size Adjustment Controls">
+            <button type="button" id="fontDecBtn" title="Decrease Font Size" aria-label="Decrease Font Size">A-</button>
+            <button type="button" id="fontResetBtn" title="Normal Font Size" aria-label="Normal Font Size">A</button>
+            <button type="button" id="fontIncBtn" title="Increase Font Size" aria-label="Increase Font Size">A+</button>
+          </div>
+          <span style="opacity: 0.3;">|</span>
+          <span class="topbar-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> English / हिन्दी</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo" aria-label="SevaSetu Home">
+        <img src="assets/images/logo.svg" alt="SevaSetu Logo" width="220" height="48">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="schemes.html" class="nav-link">Government Schemes</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-secondary btn-sm open-login-modal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          Login / Register
+        </button>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mainNav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <!-- Main Content -->
+  <main class="main-content" id="main-content">
+    
+    <!-- Services Page Header Banner -->
+    <section class="about-hero-banner" aria-labelledby="servicesPageHeading">
+      <div class="container">
+        <span class="badge badge-saffron" style="margin-bottom: 0.75rem;">Digital Service Directory</span>
+        <h1 id="servicesPageHeading">Government E-Services Portal</h1>
+        <p>
+          Apply for identity cards, certificates, revenue records, and welfare services with direct online verification and tracking.
+        </p>
+      </div>
+    </section>
+
+    <!-- Search & Filter Container -->
+    <div class="container search-section">
+      <div class="search-card" role="search" aria-label="Services Search">
+        <div class="search-input-wrap">
+          <svg class="search-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" class="search-input" id="portalSearchInput" placeholder="Search services... (e.g. Aadhaar, PAN, Birth, Caste, Income, Voter)" aria-label="Search government services">
+          <button type="button" class="search-clear-btn" id="searchClearBtn" title="Clear Search" aria-label="Clear Search Input">✕</button>
+        </div>
+
+        <div class="filter-tabs-wrap" role="tablist" aria-label="Filter Services by Category">
+          <button type="button" class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Services (8+)</button>
+          <button type="button" class="filter-tab" data-filter="identity" role="tab" aria-selected="false">Identity & Voter</button>
+          <button type="button" class="filter-tab" data-filter="certificates" role="tab" aria-selected="false">Revenue Certificates</button>
+          <button type="button" class="filter-tab" data-filter="education" role="tab" aria-selected="false">Education & Scholarships</button>
+        </div>
+
+        <div class="search-feedback-text">
+          <span id="searchResultCount">Showing all active government services</span>
+          <span>⚡ Real-Time Instant Filter</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Grid Section -->
+    <section class="section-padding" style="padding-top: 1rem;" aria-label="Services List">
+      <div class="container">
+        
+        <!-- Zero Results Fallback Card -->
+        <div class="no-results-card" id="noResultsCard" style="display: none;">
+          <div class="no-results-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="8" x2="14" y2="14"></line></svg>
+          </div>
+          <h3 class="no-results-title">No services found.</h3>
+          <p class="no-results-desc">No government services matched your search term. Please try keywords like "Aadhaar", "PAN", "Income", "Caste", or "Voter".</p>
+          <button type="button" class="btn btn-primary btn-sm" id="resetSearchBtn">Reset Search & Show All</button>
+        </div>
+
+        <!-- Full Services Grid -->
+        <div class="services-grid" id="servicesGrid">
+          
+          <!-- 1. Aadhaar Services -->
+          <article class="service-card" data-category="identity">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="3"></rect><circle cx="9" cy="10" r="2"></circle><line x1="15" y1="8" x2="17" y2="8"></line><line x1="15" y1="12" x2="17" y2="12"></line><line x1="7" y1="16" x2="17" y2="16"></line></svg>
+              </div>
+              <span class="badge badge-saffron">Identity</span>
+            </div>
+            <h3 class="service-title">Aadhaar Services</h3>
+            <p class="service-desc">Official UIDAI single window to update address, download password-protected e-Aadhaar, lock/unlock biometrics, and verify Aadhaar integrity.</p>
+            <div class="service-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Instant UIDAI Authentication</span>
+            </div>
+            <div class="service-action">
+              <button type="button" class="btn btn-primary btn-block" data-apply-service="Aadhaar Services">
+                Apply Now
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 2. PAN Card Services -->
+          <article class="service-card" data-category="identity">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+              </div>
+              <span class="badge badge-navy">Tax ID</span>
+            </div>
+            <h3 class="service-title">PAN Card Services</h3>
+            <p class="service-desc">Apply for new Instant e-PAN (Form 49A), change of name or photograph, PAN-Aadhaar linkage verification, and reprint damaged physical cards.</p>
+            <div class="service-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Processing: 2-3 Days</span>
+            </div>
+            <div class="service-action">
+              <button type="button" class="btn btn-primary btn-block" data-apply-service="PAN Card Services">
+                Apply Now
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 3. Birth Certificate -->
+          <article class="service-card" data-category="certificates">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+              </div>
+              <span class="badge badge-green">Civil Record</span>
+            </div>
+            <h3 class="service-title">Birth Certificate</h3>
+            <p class="service-desc">Online municipal birth registration, digital download with QR code verification, child name inclusion, and corrections in existing records.</p>
+            <div class="service-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Municipal Corp Delivery</span>
+            </div>
+            <div class="service-action">
+              <button type="button" class="btn btn-primary btn-block" data-apply-service="Birth Certificate">
+                Apply Now
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 4. Caste Certificate -->
+          <article class="service-card" data-category="certificates">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+              </div>
+              <span class="badge badge-navy">Revenue</span>
+            </div>
+            <h3 class="service-title">Caste Certificate</h3>
+            <p class="service-desc">Apply for SC, ST, OBC (Non-Creamy Layer) and Economically Weaker Section (EWS) certificates signed digitally by competent revenue magistrates.</p>
+            <div class="service-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Tehsil Revenue SLA: 7 Days</span>
+            </div>
+            <div class="service-action">
+              <button type="button" class="btn btn-primary btn-block" data-apply-service="Caste Certificate">
+                Apply Now
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 5. Income Certificate -->
+          <article class="service-card" data-category="certificates">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <span class="badge badge-saffron">Revenue</span>
+            </div>
+            <h3 class="service-title">Income Certificate</h3>
+            <p class="service-desc">Revenue department annual household income validation required for state educational scholarships, fee exemptions, and subsidized ration quota.</p>
+            <div class="service-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Validity: 1 Financial Year</span>
+            </div>
+            <div class="service-action">
+              <button type="button" class="btn btn-primary btn-block" data-apply-service="Income Certificate">
+                Apply Now
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 6. Residence Certificate -->
+          <article class="service-card" data-category="certificates">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              </div>
+              <span class="badge badge-green">Domicile</span>
+            </div>
+            <h3 class="service-title">Residence Certificate</h3>
+            <p class="service-desc">Official domicile certificate certifying permanent citizen address for state government job examinations, quota seats, and local welfare schemes.</p>
+            <div class="service-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Digital Signature Verified</span>
+            </div>
+            <div class="service-action">
+              <button type="button" class="btn btn-primary btn-block" data-apply-service="Residence Certificate">
+                Apply Now
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 7. Voter Services -->
+          <article class="service-card" data-category="identity">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+              </div>
+              <span class="badge badge-navy">Election</span>
+            </div>
+            <h3 class="service-title">Voter Services</h3>
+            <p class="service-desc">Election Commission of India (ECI) single window for new voter registration (Form 6), e-EPIC color card download, and assembly constituency shifting.</p>
+            <div class="service-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>ECI Official Gateway</span>
+            </div>
+            <div class="service-action">
+              <button type="button" class="btn btn-primary btn-block" data-apply-service="Voter Services">
+                Apply Now
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 8. Scholarship Services -->
+          <article class="service-card" data-category="education">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <span class="badge badge-saffron">Education</span>
+            </div>
+            <h3 class="service-title">Scholarship Services</h3>
+            <p class="service-desc">Central & State government scholarship portal for pre-matric, post-matric, higher technical studies, and minority community educational grants.</p>
+            <div class="service-meta">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Direct DBT Benefit</span>
+            </div>
+            <div class="service-action">
+              <button type="button" class="btn btn-primary btn-block" data-apply-service="Scholarship Services">
+                Apply Now
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Component 2: Service Application Modal -->
+  <div class="modal-overlay" id="serviceApplyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="applyModalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <div class="service-icon-box" style="width: 36px; height: 36px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          </div>
+          <div>
+            <h3 class="modal-title" id="applyModalTitle">Apply for E-Service</h3>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">Fill in your verified citizen information</p>
+          </div>
+        </div>
+        <button type="button" class="modal-close-btn modal-close-trigger" aria-label="Close modal">✕</button>
+      </div>
+
+      <div id="modalFormView">
+        <form id="serviceApplyForm" novalidate>
+          <div class="modal-body">
+            
+            <div class="form-group">
+              <label for="applyFullName" class="form-label">Full Name (As per Aadhaar) <span class="required">*</span></label>
+              <div class="input-container">
+                <svg class="input-icon-prefix" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <input type="text" id="applyFullName" class="form-control input-with-prefix" placeholder="e.g. Priya Sharma" required>
+              </div>
+              <div class="form-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="applyEmail" class="form-label">Email Address <span class="required">*</span></label>
+              <div class="input-container">
+                <svg class="input-icon-prefix" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <input type="email" id="applyEmail" class="form-control input-with-prefix" placeholder="e.g. priya.sharma@example.com" required>
+              </div>
+              <div class="form-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="applyPhone" class="form-label">Mobile Number <span class="required">*</span></label>
+              <div class="input-container">
+                <span class="input-prefix-tag">+91</span>
+                <input type="tel" id="applyPhone" class="form-control input-phone" placeholder="9876543210" maxlength="10" required>
+              </div>
+              <div class="form-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="applyServiceSelect" class="form-label">Selected Service / Scheme <span class="required">*</span></label>
+              <div class="input-container">
+                <select id="applyServiceSelect" class="form-control" required>
+                  <option value="" disabled selected>-- Select a Government Service --</option>
+                  <option value="Aadhaar Services">Aadhaar Services</option>
+                  <option value="PAN Card Services">PAN Card Services</option>
+                  <option value="Birth Certificate">Birth Certificate</option>
+                  <option value="Caste Certificate">Caste Certificate</option>
+                  <option value="Income Certificate">Income Certificate</option>
+                  <option value="Residence Certificate">Residence Certificate</option>
+                  <option value="Voter Services">Voter Services</option>
+                  <option value="Scholarship Services">Scholarship Services</option>
+                </select>
+              </div>
+              <div class="form-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="applyDescription" class="form-label">Application Description / Remarks (Optional)</label>
+              <textarea id="applyDescription" class="form-control" rows="3" placeholder="Provide any additional details or references..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-checkbox-label">
+                <input type="checkbox" id="applyAgree" class="form-checkbox" required>
+                <span>I confirm that the submitted details are correct under Government of India citizen e-filing rules.</span>
+              </label>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline modal-close-trigger">Cancel</button>
+            <button type="submit" class="btn btn-primary">
+              Submit Application
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success View -->
+      <div id="modalSuccessView" class="modal-success-box">
+        <div class="success-badge-icon">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem;">Application submitted successfully!</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          Your application reference has been forwarded to the concerned department.
+        </p>
+
+        <div>
+          <span style="font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; font-weight: 700;">Acknowledgement ID</span>
+          <br>
+          <div class="success-ack-code" id="appAckId">SS-2026-XXXXX</div>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; justify-content: center; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-secondary modal-close-trigger">Close</button>
+          <button type="button" class="btn btn-outline" id="startNewAppBtn">New Application</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="loginModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="loginModalTitle">Citizen & Official Gateway</h3>
+        <button type="button" class="modal-close-btn modal-close-trigger" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tabs">
+          <button type="button" class="modal-tab-btn active" data-tab="tabCitizen">Citizen Login</button>
+          <button type="button" class="modal-tab-btn" data-tab="tabOfficial">Official Login</button>
+          <button type="button" class="modal-tab-btn" data-tab="tabRegister">New Citizen</button>
+        </div>
+
+        <div class="auth-tab-pane" id="tabCitizen">
+          <form id="citizenLoginForm">
+            <div class="form-group">
+              <label for="citizenLoginPhone" class="form-label">Registered Mobile Number <span class="required">*</span></label>
+              <div class="input-container">
+                <span class="input-prefix-tag">+91</span>
+                <input type="tel" id="citizenLoginPhone" class="form-control input-phone" placeholder="9876543210" maxlength="10" required>
+              </div>
+              <div class="form-feedback"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Get OTP & Login</button>
+          </form>
+        </div>
+
+        <div class="auth-tab-pane" id="tabOfficial" style="display: none;">
+          <form id="officialLoginForm">
+            <div class="form-group">
+              <label for="govOfficialEmail" class="form-label">Official Email <span class="required">*</span></label>
+              <input type="email" id="govOfficialEmail" class="form-control" placeholder="officer@nic.in" required>
+              <div class="form-feedback"></div>
+            </div>
+            <div class="form-group">
+              <label for="govOfficialPassword" class="form-label">Password <span class="required">*</span></label>
+              <input type="password" id="govOfficialPassword" class="form-control" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-block">Authorize</button>
+          </form>
+        </div>
+
+        <div class="auth-tab-pane" id="tabRegister" style="display: none;">
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="regFullName" class="form-label">Full Name <span class="required">*</span></label>
+              <input type="text" id="regFullName" class="form-control" placeholder="Aadhaar Name" required>
+            </div>
+            <div class="form-group">
+              <label for="regEmail" class="form-label">Email <span class="required">*</span></label>
+              <input type="email" id="regEmail" class="form-control" placeholder="name@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="regPhone" class="form-label">Mobile Number <span class="required">*</span></label>
+              <div class="input-container">
+                <span class="input-prefix-tag">+91</span>
+                <input type="tel" id="regPhone" class="form-control input-phone" placeholder="9876543210" maxlength="10" required>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" title="Back to Top" aria-label="Scroll to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/images/logo.svg" alt="SevaSetu Logo" width="200" height="44">
+          </div>
+          <p class="footer-desc">
+            Unified single-window e-governance service gateway developed for citizen administration across India.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="schemes.html">Government Schemes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">National Portals</h4>
+          <ul class="footer-links">
+            <li><a href="https://india.gov.in" target="_blank" rel="noopener noreferrer">National Portal of India ↗</a></li>
+            <li><a href="https://digitalindia.gov.in" target="_blank" rel="noopener noreferrer">Digital India ↗</a></li>
+            <li><a href="https://uidai.gov.in" target="_blank" rel="noopener noreferrer">UIDAI Aadhaar ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Toll-Free Helpline</h4>
+          <div class="footer-helpline-box">
+            <div class="helpline-number">1800-111-7382</div>
+            <p style="font-size: 0.8rem; color: #94A3B8; margin: 0;">24×7 Citizen Assistance</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 SevaSetu – National E-Governance Portal. YUVA Intern Week 3 Project.</div>
+        <div>National Informatics Centre (NIC)</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

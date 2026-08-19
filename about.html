@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About SevaSetu – National E-Governance Portal</title>
+  <meta name="description" content="Learn about SevaSetu's mission, vision, citizen charter, and digital governance architecture built for Indian citizens.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Accessibility Bar -->
+  <aside class="gov-topbar" aria-label="Government Identification and Accessibility Bar">
+    <div class="container">
+      <div class="gov-topbar-inner">
+        <div class="gov-flag-badge">
+          <div class="tricolor-mini" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span>GOVERNMENT OF INDIA | NATIONAL E-GOVERNANCE GATEWAY</span>
+        </div>
+        <div class="topbar-actions">
+          <a href="#main-content" class="topbar-link">Skip to Main Content</a>
+          <span style="opacity: 0.3;">|</span>
+          <div class="font-resizer" aria-label="Text Size Adjustment Controls">
+            <button type="button" id="fontDecBtn" title="Decrease Font Size" aria-label="Decrease Font Size">A-</button>
+            <button type="button" id="fontResetBtn" title="Normal Font Size" aria-label="Normal Font Size">A</button>
+            <button type="button" id="fontIncBtn" title="Increase Font Size" aria-label="Increase Font Size">A+</button>
+          </div>
+          <span style="opacity: 0.3;">|</span>
+          <span class="topbar-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> English / हिन्दी</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo" aria-label="SevaSetu Home">
+        <img src="assets/images/logo.svg" alt="SevaSetu Logo" width="220" height="48">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="schemes.html" class="nav-link">Government Schemes</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-secondary btn-sm open-login-modal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          Login / Register
+        </button>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mainNav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <!-- Main Content -->
+  <main class="main-content" id="main-content">
+    
+    <!-- Hero Banner -->
+    <section class="about-hero-banner" aria-labelledby="aboutPageHeading">
+      <div class="container">
+        <span class="badge badge-saffron" style="margin-bottom: 0.75rem;">About the Portal</span>
+        <h1 id="aboutPageHeading">Empowering India Through Digital Governance</h1>
+        <p>
+          SevaSetu (Bridge of Services) represents India's dedication to accessible, accountable and paperless public service delivery for over 1.4 billion citizens.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="container" style="margin-top: 1rem;">
+      <div class="mission-vision-grid">
+        
+        <div class="mv-card">
+          <div class="mv-icon saffron">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 6 12 12 16 14"></polygon></svg>
+          </div>
+          <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Our Mission</h2>
+          <p style="color: var(--text-muted); line-height: 1.7;">
+            To provide every Indian citizen with a single-window digital gateway for obtaining vital civil certificates, statutory identity documents, and direct financial entitlements without visiting physical government offices or dealing with intermediaries.
+          </p>
+        </div>
+
+        <div class="mv-card">
+          <div class="mv-icon navy">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </div>
+          <h2 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Our Vision</h2>
+          <p style="color: var(--text-muted); line-height: 1.7;">
+            To transform Indian public administration into an inclusive, transparent, paperless, and real-time digital governance ecosystem aligned with the national Digital India, PM Gati Shakti, and e-Kranti benchmarks.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Four Strategic Pillars -->
+    <section class="section-padding" style="background-color: #FFFFFF;" aria-labelledby="pillarsHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="badge badge-navy">Foundations of SevaSetu</span>
+          <h2 class="section-title" id="pillarsHeading">Core Architecture & Principles</h2>
+          <p class="section-description">
+            Four foundational pillars that guarantee integrity, efficiency, and trust in every digital citizen transaction.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          
+          <div class="feature-box">
+            <div class="feature-icon-wrap saffron">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="feature-title">1. Transparency & Zero Leakage</h3>
+            <p class="feature-desc">All applications generate immutable reference codes. Welfare benefits are transferred directly to bank accounts (DBT) with end-to-end auditability.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap navy">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3 class="feature-title">2. Universal Citizen Inclusion</h3>
+            <p class="feature-desc">Mobile-first interface, accessible text-size toggles, assistive technology compatibility, and multilingual availability for urban and rural citizens.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap green">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+            </div>
+            <h3 class="feature-title">3. Guaranteed Service SLAs</h3>
+            <p class="feature-desc">Mandated timelines for birth certificates (3 days), income verification (7 days), and instant e-Aadhaar downloads under Right to Public Services Act.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrap blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="feature-title">4. Data Protection & Privacy</h3>
+            <p class="feature-desc">Strict adherence to the Digital Personal Data Protection (DPDP) Act 2023. User data is never sold or shared with non-authorized commercial entities.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Citizen Journey Flow -->
+    <section class="section-padding" style="background-color: var(--bg-alt);" aria-labelledby="journeyHeading">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="badge badge-saffron">Simplified Workflow</span>
+          <h2 class="section-title" id="journeyHeading">How SevaSetu Works</h2>
+          <p class="section-description">
+            Four simple steps to apply, verify, and receive digitally signed government certificates and welfare benefits.
+          </p>
+        </div>
+
+        <div class="timeline-flow">
+          
+          <div class="timeline-step">
+            <div class="step-num">01</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Select Service</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted);">Choose from 25+ e-services or 10+ central welfare schemes on the portal.</p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-num">02</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Fill Details</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted);">Provide verified name, email, and 10-digit mobile number in the online modal.</p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-num">03</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Instant Ack ID</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted);">Receive your official Application ID (e.g. SS-2026-XXXXX) with SMS confirmation.</p>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-num">04</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Digital Issuance</h3>
+            <p style="font-size: 0.875rem; color: var(--text-muted);">Download your digitally signed certificate with QR verification directly to DigiLocker.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="loginModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="loginModalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="loginModalTitle">Citizen & Official Gateway</h3>
+        <button type="button" class="modal-close-btn modal-close-trigger" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tabs">
+          <button type="button" class="modal-tab-btn active" data-tab="tabCitizen">Citizen Login</button>
+          <button type="button" class="modal-tab-btn" data-tab="tabOfficial">Official Login</button>
+          <button type="button" class="modal-tab-btn" data-tab="tabRegister">New Citizen</button>
+        </div>
+
+        <div class="auth-tab-pane" id="tabCitizen">
+          <form id="citizenLoginForm">
+            <div class="form-group">
+              <label for="citizenLoginPhone" class="form-label">Registered Mobile Number <span class="required">*</span></label>
+              <div class="input-container">
+                <span class="input-prefix-tag">+91</span>
+                <input type="tel" id="citizenLoginPhone" class="form-control input-phone" placeholder="9876543210" maxlength="10" required>
+              </div>
+              <div class="form-feedback"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Get OTP & Login</button>
+          </form>
+        </div>
+
+        <div class="auth-tab-pane" id="tabOfficial" style="display: none;">
+          <form id="officialLoginForm">
+            <div class="form-group">
+              <label for="govOfficialEmail" class="form-label">Official Email <span class="required">*</span></label>
+              <input type="email" id="govOfficialEmail" class="form-control" placeholder="officer@nic.in" required>
+            </div>
+            <div class="form-group">
+              <label for="govOfficialPassword" class="form-label">Password <span class="required">*</span></label>
+              <input type="password" id="govOfficialPassword" class="form-control" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-secondary btn-block">Authorize</button>
+          </form>
+        </div>
+
+        <div class="auth-tab-pane" id="tabRegister" style="display: none;">
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="regFullName" class="form-label">Full Name <span class="required">*</span></label>
+              <input type="text" id="regFullName" class="form-control" placeholder="Aadhaar Name" required>
+            </div>
+            <div class="form-group">
+              <label for="regEmail" class="form-label">Email <span class="required">*</span></label>
+              <input type="email" id="regEmail" class="form-control" placeholder="name@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="regPhone" class="form-label">Mobile Number <span class="required">*</span></label>
+              <div class="input-container">
+                <span class="input-prefix-tag">+91</span>
+                <input type="tel" id="regPhone" class="form-control input-phone" placeholder="9876543210" maxlength="10" required>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" title="Back to Top" aria-label="Scroll to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="assets/images/logo.svg" alt="SevaSetu Logo" width="200" height="44">
+          </div>
+          <p class="footer-desc">
+            Bridging citizens and government administration through transparent, modern digital public infrastructure.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="schemes.html">Government Schemes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">National Portals</h4>
+          <ul class="footer-links">
+            <li><a href="https://india.gov.in" target="_blank" rel="noopener noreferrer">National Portal of India ↗</a></li>
+            <li><a href="https://digitalindia.gov.in" target="_blank" rel="noopener noreferrer">Digital India ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Toll-Free Helpline</h4>
+          <div class="footer-helpline-box">
+            <div class="helpline-number">1800-111-7382</div>
+            <p style="font-size: 0.8rem; color: #94A3B8; margin: 0;">24×7 Citizen Assistance</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 SevaSetu – National E-Governance Portal. YUVA Intern Week 3 Project.</div>
+        <div>National Informatics Centre (NIC)</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
